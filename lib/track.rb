@@ -21,4 +21,9 @@ class Track
       original_price
     end
   end
+
+  def reset
+    @discount_amount = 0
+    price
+  end
 end

@@ -16,4 +16,9 @@ describe Track do
     expect(track.price).to eq 0.75
   end
 
+  it 'resets song to original price' do
+    track = Track.new("99 Problems", "Jay-Z", 180, 1.00)
+    expect(track.reset).to eq 1.00
+  end
+
 end
