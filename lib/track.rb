@@ -7,4 +7,12 @@ class Track
     @duration = duration
     @price = price
   end
+
+  def discount(amount)
+    price * amount
+  end
+
+  def reset
+    price
+  end
 end
