@@ -6,11 +6,11 @@ class Album
   end
 
   def duration
-    tracks.map(&:duration).reduce(&:+)
+    tracks.map(&:duration).reduce(0, &:+)
   end
 
   def price
-    tracks.map(&:price).reduce(&:+)
+    tracks.map(&:price).reduce(0, &:+)
   end
 
   def artists
