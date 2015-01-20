@@ -1,6 +1,6 @@
 ![General Assembly Logo](http://i.imgur.com/ke8USTq.png)
 
-# Assignment Name (Ruby String Lab)
+# SpecTunes
 
 ## Objectives
 
@@ -21,10 +21,6 @@ By the end of this, students should be able to:
 * Create this file: `lib/album.rb`
 * Write your rspec tests in the spec files. 
 * Write the code to make your tests pass in the lib directory
-
-# SpecTunes
-
-Using test-driven development with RSpec, create the following classes:
 
 ### `Track`
 
