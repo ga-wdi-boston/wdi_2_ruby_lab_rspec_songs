@@ -1,6 +1,30 @@
+![General Assembly Logo](http://i.imgur.com/ke8USTq.png)
+
+# Assignment Name (Ruby String Lab)
+
+## Objectives
+
+By the end of this, students should be able to:
+
+- Take plain-english business requirements and translate them into RSpec tests
+- Write an RSpec test for the Track class
+- Write an RSpec test for the Album class
+
+## Instructions
+
+* Fork and clone.
+* Run `bundle` / `bundle install` (they're the same)
+* Run `rspec --init`
+* Create this file: `spec/track_spec.rb`
+* Create this file: `spec/album_spec.rb`
+* Create this file: `lib/track.rb`
+* Create this file: `lib/album.rb`
+* Write your rspec tests in the spec files. 
+* Write the code to make your tests pass in the lib directory
+
 # SpecTunes
 
-Using pair test-driven development with RSpec, create the following classes:
+Using test-driven development with RSpec, create the following classes:
 
 ### `Track`
 
