@@ -6,16 +6,16 @@ require_relative '../lib/track'
 
 RSpec.describe Track do
   it 'it lists all the tracks and their individual prices, by respected artist' do
-    track = Track.new('Invincible', ['Adelitas Way'], '3:10', '0.99')
-    track = Track.new('Scream', ['Adelitas Way'], '3:34', '0.99')
-    track = Track.new('So Cold', ['Breaking Benjamin'], '3:56', '0.99')
-    track = Track.new('Sooner or Later', ['Breaking Benjamin'], '3:24', '0.99')
-    track = Track.new('The Phoenix', ['Fall Out Boy'], '4:04', '0.99')
-    track = Track.new('Centuries', ['Fall Out Boy'], '3:51', '0.99')
-    track = Track.new('Alive and Kicking', ['NonPoint'], '3:59', '0.99')
-    track = Track.new('Broken Down', ['Sevendust'], '3:23', '0.99')
-    track = Track.new('Separate', ['Sevendust'], '3:41', '0.99')
-    track = Track.new('Karma', ['Sevendust'], '3:43', '0.99')
+    track = Track.new({title:'Invincible'},{artist:'Adelitas Way'},{duration:'3:10'},{price:'0.99'})
+    track = Track.new({title:'Scream'},{artist:'Adelitas Way'},{duration:'3:34'},{price:'0.99'})
+    track = Track.new({title:'So Cold'},{artist:'Breaking Benjamin'},{duration:'3:56'},{price:'0.99'})
+    track = Track.new({title:'Sooner or Later'},{artist:'Breaking Benjamin'},{duration:'3:24'},{price:'0.99'})
+    track = Track.new({title:'The Phoenix'},{artist:'Fall Out Boy'},{duration:'4:04'},{price:'0.99'})
+    track = Track.new({title:'Centuries'},{artist:'Fall Out Boy'},{duration:'3:51'},{price:'0.99'})
+    track = Track.new({title:'Alive and Kicking'},{artist:'NonPoint'},{duration:'3:59'},{price:'0.99'})
+    track = Track.new({title:'Broken Down'},{artist:'Sevendust'},{duration:'3:23'},{price:'0.99'})
+    track = Track.new({title:'Separate'},{artist:'Sevendust'},{duration:'3:41'},{price:'0.99'})
+    track = Track.new({title:'Karma'},{artist:'Sevendust'},{duration:'3:43'},{price:'0.99'})
   end
 end
 
@@ -23,7 +23,8 @@ end
 #Has a "reset discount" method that restores the price to its original value
 describe '#set_discount' do
     it 'reduces the price by a given percentage' do
-      expect(@track.set_discount).to eq [0.99 * 0.1 - difference]
+      expect(@track.set_discount).to eq [0.99 * 0.1 == amount_to_subtract]
+      expect(@track.set_discount).to eq [0.99 - amount_to_subtract]
     end
   end
 

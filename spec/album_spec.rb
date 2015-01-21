@@ -16,45 +16,46 @@ RSpec.describe Album do
     album = Album.new
     album.add_entry(Track.new(:name => Name.new(
       :price => Money.new(0.99, :USD)
-      :time => Time.new(, :minutes)
+      :time => Time.new(:duration)
     )))
     album.add_entry(Track.new(:name => Name.new(
       :price => Money.new(0.99, :USD)
-      :time => Time.new(, :minutes)
+      :time => Time.new(:duration)
     )))
     album.add_entry(Track.new(:name => Name.new(
       :price => Money.new(0.99, :USD)
-      :time => Time.new(, :minutes)
+      :time => Time.new(:duration)
     )))
     album.add_entry(Track.new(:name => Name.new(
       :price => Money.new(0.99, :USD)
-      :time => Time.new(, :minutes)
+      :time => Time.new(:duration)
     )))
     album.add_entry(Track.new(:name => Name.new(
       :price => Money.new(0.99, :USD)
-      :time => Time.new(, :minutes)
+      :time => Time.new(:duration)
     )))
     album.add_entry(Track.new(:name => Name.new(
       :price => Money.new(0.99, :USD)
-      :time => Time.new(, :minutes)
+      :time => Time.new(:duration)
     )))
     album.add_entry(Track.new(:name => Name.new(
       :price => Money.new(0.99, :USD)
-      :time => Time.new(, :minutes)
+      :time => Time.new(:duration)
     )))
     album.add_entry(Track.new(:name => Name.new(
       :price => Money.new(0.99, :USD)
-      :time => Time.new(, :minutes)
+      :time => Time.new(:duration)
     )))
     album.add_entry(Track.new(:name => Name.new(
       :price => Money.new(0.99, :USD)
-      :time => Time.new(, :minutes)
+      :time => Time.new(:duration)
     )))
     album.add_entry(Track.new(:name => Name.new(
       :price => Money.new(0.99, :USD)
-      :time => Time.new(, :minutes)
+      :time => Time.new(:duration)
     )))
     expect(order.total).to eq(Money.new(9.90, :USD))
-    expect(duration.total).to eq(Time.new(, :minutes))
+    expect(duration.total).to eq(Time.new(:duration))
+    expect(artist.sort).to eq(Artist.new(chars.sort_by)
   end
 end
