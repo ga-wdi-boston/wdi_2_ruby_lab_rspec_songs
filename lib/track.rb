@@ -1,8 +1,8 @@
 require 'pry-byebug'
 
 class Track
-  def initialize(title, artist, duration, price)
-    @title = title
+  def initialize(track_title, artist, duration, price)
+    @track_title = track_title
     @artist = artist
     @duration = duration
     @price = price
@@ -12,8 +12,8 @@ class Track
     @price
   end
 
-  def find_title
-    @title
+  def find_track_title
+    @track_title
   end
 
   def set_discount(discount)
