@@ -9,7 +9,8 @@ class Album
   end
 
   def price_total
-    @songs
+    @songs.map{|hash| hash.map{|key| key.to_i}
+    }
   end
 
 end

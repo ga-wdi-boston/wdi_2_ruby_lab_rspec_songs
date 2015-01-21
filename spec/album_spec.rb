@@ -37,7 +37,7 @@ RSpec.describe Album do
 #Has a duration (combined duration of all tracks)
   describe '#price_total' do
     it 'checks to ensure the cost is summed' do
-      expect(@entry.has_keys).to eq [:artist, :title, :duration, :price]
+      expect(@entry.has_keys).to eq [2]
     end
   end
 
