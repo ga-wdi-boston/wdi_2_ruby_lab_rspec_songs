@@ -6,7 +6,7 @@ class Album
   end
 
   def duration
-    @tracks.map {|x| x.duration}.inject(&:+)
+    (@tracks.map {|x| x.duration.split(/:/).map(&:to_i)}.map! {|y| y[0] * 60 + y[1] }.inject(:+))/ 60
   end
 
   def total_price

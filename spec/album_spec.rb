@@ -6,9 +6,9 @@ describe Album do
   before(:all) do
   @title= "Good Songs"
   @songs = [
-    track_1 = Track.new(title: "Strawberry Fields", artists: "The Beatles", duration: 3.5, price: 1.00),
-    track_2 = Track.new(title: "I am the Walrus", artists: "The Beatles", duration: 4.5, price: 1.00),
-    track_3 = Track.new(title: "Ruby Tuesday", artists: "The Rolling Stones", duration: 4.0, price: 1.00)
+    track_1 = Track.new(title: "Strawberry Fields", artists: "The Beatles", duration: "3:30", price: 1.00),
+    track_2 = Track.new(title: "I am the Walrus", artists: "The Beatles", duration: "4:30", price: 1.00),
+    track_3 = Track.new(title: "Ruby Tuesday", artists: "The Rolling Stones", duration: "4:00", price: 1.00)
     ]
     @album1 = Album.new(title: @title, tracks: @songs)
 
@@ -44,5 +44,7 @@ describe Album do
       expect(@album1.album_single?).to eq false
     end
   end
+
+  describe
 
 end
