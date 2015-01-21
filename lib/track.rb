@@ -1,6 +1,6 @@
 class Track
 
-  #attr_accessor :title, :duration, :price
+  attr_accessor :title, :artist, :duration, :price
   def initialize (info = {})
     @title = info[:title]
     @artist = info[:artist]
@@ -9,13 +9,15 @@ class Track
   end
 
   def set_discount (percent)
-   # binding.byebug
+   raise ArgumentError, 'Argument cannot exceed 100%' unless percent < 1.0
+
      @price = (@price - @price * percent).round(2)
   end
 
   def restore_value(percent)
-  #  binding.byebug
-     @price = (@price / (1 - percent)).round(2)
+  raise ArgumentError, 'Argument cannot exceed 100%' unless percent < 1.0
+
+    @price = (@price / (1 - percent)).round(2)
   end
 
 
