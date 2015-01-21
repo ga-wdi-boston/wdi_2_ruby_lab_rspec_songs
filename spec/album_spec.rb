@@ -6,6 +6,7 @@ require_relative '../lib/album'
 
 describe Album do
 
+  attr_reader :album
   before(:each) do
     test_nesting = [
       Track.new({title: "Sweet Georgia Brown", artist: "Django Reinhardt,Ben Bernie", duration: 178, price: 4.00}),
@@ -15,6 +16,8 @@ describe Album do
 
       @album = Album.new("Django and His American Friends",test_nesting)
   end
+
+
 
   describe '#track_list' do
     it 'Outputs the album\'s track list' do

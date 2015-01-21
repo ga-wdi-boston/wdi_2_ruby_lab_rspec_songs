@@ -1,34 +1,35 @@
 require_relative './track.rb'
 
-class Album < Track
+class Album
 
-  attr_reader :track_info
-  def initialize (album_title, track_info)
-    raise ArgumentError, 'Must have at least 1 track' unless track_info.length > 0
+  attr_accessor :tracks
+  def initialize (album_title, tracks)
+    # raise ArgumentError, 'Must have at least 1 track' unless tracks.length > 0
 
     @album_title = album_title
-    @track_info = track_info
+    @tracks = tracks
+   # binding byebug
   end
 
   def track_list
-   # binding byebug
-    track_info.map(&:title)
+    #binding byebug
+    tracks.map!(&:title)
   end
 
   def total_duration
-    track_info.map(&:duration).reduce(:+)
+    tracks.map(&:duration).reduce(:+)
   end
 
   def total_price
-    track_info.map(&:price).reduce(:+)
+    tracks.map(&:price).reduce(:+)
   end
 
   def all_artists
-    track_info.map{|song| song.artist.split(",")}.flatten.uniq
+    tracks.map{|song| song.artist.split(",")}.flatten.uniq
   end
 
   def single_track?
-    track_info.length == 1
+    tracks.length == 1
   end
 
 end
