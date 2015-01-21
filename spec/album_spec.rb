@@ -3,6 +3,7 @@ require 'pry'
 require 'byebug'
 
 require_relative '../lib/album'
+require_relative '../lib/track'
 
 RSpec.describe Album do
   it 'it contains a collection of tracks and the total price for the album' do

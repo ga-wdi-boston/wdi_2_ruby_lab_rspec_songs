@@ -18,3 +18,17 @@ RSpec.describe Track do
     track = Track.new('Karma', ['Sevendust'], '3:43', '0.99')
   end
 end
+
+#Has a "set discount" method that reduces the price by a given percentage
+#Has a "reset discount" method that restores the price to its original value
+describe '#set_discount' do
+    it 'reduces the price by a given percentage' do
+      expect(@track.set_discount).to eq [0.99 * 0.1 - difference]
+    end
+  end
+
+  describe '#reset_discount' do
+    it 'restores the price to its original value'  do
+      expect(@track.reset_discount).to eq ['0.99']
+    end
+  end
