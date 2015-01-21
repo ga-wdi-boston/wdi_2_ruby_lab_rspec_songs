@@ -14,9 +14,6 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
-    pry-byebug (2.0.0)
-      byebug (~> 3.4)
-      pry (~> 0.10)
     rspec (3.1.0)
       rspec-core (~> 3.1.0)
       rspec-expectations (~> 3.1.0)
@@ -35,5 +32,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  pry-byebug
+  byebug
+  pry
   rspec (~> 3.1)
