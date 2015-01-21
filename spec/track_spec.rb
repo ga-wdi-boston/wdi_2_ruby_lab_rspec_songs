@@ -9,7 +9,7 @@ RSpec.describe Track do
       duration: 4.20,
       price: 1.0
     }
-    @track = Hash.new(test_track)
+    @track = Track.new(test_track)
   end
 
   describe '#set_price' do

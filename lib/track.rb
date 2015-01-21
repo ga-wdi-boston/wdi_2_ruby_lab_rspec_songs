@@ -6,7 +6,8 @@ class Track
   end
 
   def set_price(x)
-    track[:price] - x
+    discount = track[:price] - x
+    discount.round(1)
   end
 
   def reset_discount
